@@ -31,7 +31,7 @@ class ChatService extends ChangeNotifier{
     await _firestore
         .collection('chat_rooms')
         .doc(chatRoomId)
-        .collection('Messages')
+        .collection('messages')
         .add(newMessage
         .toMap());
   }
